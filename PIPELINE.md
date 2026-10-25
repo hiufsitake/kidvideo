@@ -10,6 +10,17 @@ Daily job: make 2 new 15-second kids YouTube Shorts and schedule them in Metrico
 - Cartoon style drawn in code (flat, cute, faces on objects, thick dark outlines, confetti/sky backgrounds). Not realistic, so `isAiGeneratedContent` = false.
 - Every Short must have real learning value (sounds, colours, counting, shapes, opposites, ABC, healthy habits…), not filler.
 
+## Channel safety — TOP PRIORITY (Fs does not want the channel banned)
+Safety beats views. If a Short can't meet every rule below, don't post it; report why instead.
+- **Copyright:** only original visuals, voice and music made in the pipeline. No characters, logos, songs, sound clips or footage from anyone else — not even "a similar version". Nursery rhymes only if published before 1929, sung with our own melody synth, and never a modern remake's arrangement.
+- **Child safety:** nothing scary, violent, gross, unsafe to copy (no climbing, fire, choking hazards, medicine, strangers), or "Elsagate"-style. Gentle, positive, age 2–6.
+- **No misleading metadata:** title, description, tags and thumbnail must describe exactly what's in the video. No clickbait, no fake "Part 2" of other channels, no trending names or brands that aren't in the video, max ~10 relevant tags, no tag or hashtag stuffing (≤ 6 hashtags).
+- **Not mass-produced / repetitive (inauthentic content policy):** every Short must have a different script and a clearly different visual concept, characters or format from the last 14 in `topics.md`. Never re-upload or lightly re-edit an earlier video. Series are fine; clones are not.
+- **Spam:** never post the same video twice, never post to other channels, no "sub4sub", no links, no asking kids to like/comment/subscribe.
+- **Made for Kids** must always be `true` (COPPA). AI disclosure: set `isAiGeneratedContent` true if a video ever contains realistic-looking AI people, animals or places.
+- **Accuracy:** every fact taught (animal sounds, colours, counts, spellings) must be correct — double-check before rendering.
+- **Volume:** stay within 2 Shorts/day and Metricool's monthly limit; never bulk-post to catch up.
+
 ## Topic selection (high views)
 Highest-viewed kids categories on YouTube: nursery rhymes / kids songs; animals & animal sounds;
 learning basics (colours, ABC/phonics, counting, shapes); opposites / this-or-that (big vs small);
