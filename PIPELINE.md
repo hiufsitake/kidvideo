@@ -37,6 +37,8 @@ If Metricool analytics show a series doing best, make more of it.
 ## Make it attractive — continuous improvement
 Every run must make the videos noticeably better than the last, not just new. Pick at least ONE upgrade per run, apply it,
 and log it in `LEARNINGS.md` (date, what changed, why). Keep upgrades that work; promote proven ones into the example scripts in `pipeline/`.
+**Safe zone (mandatory):** YouTube's Shorts UI covers the bottom ~20% (title, handle, description) and the right ~13% (like/share buttons) and the top ~8%.
+Keep all characters, captions and key action inside x 60–920, y 180–1500 of the 1080x1920 frame; only background decoration may sit outside it.
 Upgrade ideas, roughly in priority order:
 1. **Hook in 1 second:** the first frame already has motion, a big face and a question; no slow fade-ins.
 2. **Character appeal:** soft gradient shading, rim highlights, drop shadows, bigger heads and eyes, blinking, squash-and-stretch on landing, little idle wiggles.
