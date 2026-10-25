@@ -28,6 +28,26 @@ healthy habits (wash hands, brush teeth, eat veggies). Rotate across these, buil
 (e.g. "Guess the Animal #2"), and never repeat a topic already in `topics.md`.
 If Metricool analytics show a series doing best, make more of it.
 
+## Learn from top Shorts (every run, before writing scripts)
+- Web-search what kids' Shorts are getting the most views right now (Tubefilter weekly charts, top kids Shorts channels, trending learning topics).
+- Study only the *ideas*: topics, hook styles, pacing, length, colour palettes, question formats, series structures. Formats aren't owned by anyone.
+- Never download, copy, trace or re-edit anyone else's video, art, characters, voice or music. Everything we publish is made from scratch here.
+- Note 1–3 takeaways in `LEARNINGS.md` and use them in today's Shorts.
+
+## Make it attractive — continuous improvement
+Every run must make the videos noticeably better than the last, not just new. Pick at least ONE upgrade per run, apply it,
+and log it in `LEARNINGS.md` (date, what changed, why). Keep upgrades that work; promote proven ones into the example scripts in `pipeline/`.
+Upgrade ideas, roughly in priority order:
+1. **Hook in 1 second:** the first frame already has motion, a big face and a question; no slow fade-ins.
+2. **Character appeal:** soft gradient shading, rim highlights, drop shadows, bigger heads and eyes, blinking, squash-and-stretch on landing, little idle wiggles.
+3. **Camera life:** gentle zoom-ins on reveals, slight pans, screen shake on "pop", parallax background layers.
+4. **Pacing:** something new happens every 1–1.5 s; total 15 s; end on a satisfying payoff.
+5. **Colour:** bright, saturated, high-contrast palettes; each scene has one dominant colour.
+6. **Text:** huge, bold, few words, word-by-word pop synced to the voice; always readable on a phone.
+7. **Sound:** a catchy simple melody that matches the theme, a distinct SFX for every pop/reveal, the voice clearly above the music.
+8. **Polish:** particles (stars, confetti, bubbles), smooth easing, no hard cuts without a transition.
+Use Metricool analytics (brand 7637079) once videos have data: compare views and retention by series, and write in `LEARNINGS.md` what the best ones have in common.
+
 ## Tools
 - Voice: `pip install --break-system-packages kokoro-onnx soundfile`, model files from
   https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/kokoro-v1.0.int8.onnx and voices-v1.0.bin.
