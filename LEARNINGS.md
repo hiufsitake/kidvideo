@@ -16,3 +16,14 @@ Each run adds: date · what we learned from top Shorts · which upgrade we appli
   4. Camera/sound — reveal flash + small screen shake, star burst on each reveal/count, distinct boing/ding/sparkle SFX, soft kick in the music.
 - Safe zone now enforced: characters/captions kept in x 60–920, y 180–1500 (Shorts #1–2 placed characters down to y≈1680).
 - Result: pending analytics (Short #1 only published 2026-10-25).
+
+## 2026-10-27 — Shorts #5 (Shape Friends) and #6 (Big or Small?)
+- Analytics: Metricool returned no views/retention yet for Shorts #1–#4, so no series could be favoured; rotated into two untouched high-view categories (shapes, opposites).
+- Research: web search again returned only generic Tubefilter channel charts; takeaway carried over — simple this-or-that contrasts (big vs small) and "spot it in real life" examples (circle = sun) are strong toddler formats.
+- Upgrades applied (added to `pipeline/common.py`):
+  1. Camera life — `camera()` + `zoom_curve()`: gentle 5–6% zoom toward the focus on each reveal (example object / small animal).
+  2. Transitions — iris-wipe between scenes (0.22 s expanding circle with white rim) instead of hard cuts.
+  3. Polish — `confetti()` falling, spinning confetti on the ending payoff.
+  4. Learning beats — numbered corner dots pop one by one (square 1–4, triangle 1–3) with a pop SFX each; size contrast taught visually with BIG caption vs small caption.
+- Caught in contact sheet: first ending of #6 showed the bear larger than the elephant (contradicts the lesson) — fixed to elephant vs mouse; sea light-rays read as harsh stripes — replaced with bubbles.
+- Result: pending analytics.

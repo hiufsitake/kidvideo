@@ -220,3 +220,28 @@ def contact_sheet(frame_fn, times, path, cols=4):
         d.text((6, 6), f"{times[i]:.1f}s", fill=(255, 0, 0))
         sheet.paste(im, ((i % cols) * 270, (i // cols) * 480))
     sheet.save(path)
+
+# ---------- camera + particles (added 2026-10-27) ----------
+def camera(base, zoom=1.0, fx=CX, fy=960):
+    """Gentle zoom towards focus point (fx, fy). Keep zoom <= ~1.08 so safe-zone content stays on screen."""
+    if zoom <= 1.001: return base
+    w, h = W / zoom, H / zoom
+    x0 = min(max(fx - w * fx / W, 0), W - w); y0 = min(max(fy - h * fy / H, 0), H - h)
+    return base.crop((int(x0), int(y0), int(x0 + w), int(y0 + h))).resize((W, H), Image.BILINEAR)
+
+def zoom_curve(lt, peak=1.06, rise=0.5):
+    """0 -> peak over `rise` seconds with ease-out, then hold."""
+    return 1 + (peak - 1) * ease_out(lt / rise)
+
+def confetti(d, lt, n=46, seed=5, cols=((255, 90, 90), (255, 200, 50), (90, 200, 120), (80, 160, 255), (200, 120, 255), (255, 140, 200))):
+    """Falling, spinning confetti strips for the ending payoff (lt = seconds since start)."""
+    if lt < 0: return
+    rng = np.random.default_rng(seed)
+    for i in range(n):
+        x0, sp, ph, sz = rng.uniform(0, W), rng.uniform(380, 650), rng.uniform(0, 6.3), rng.uniform(16, 30)
+        y = -60 + sp * lt - rng.uniform(0, 500)
+        if y < -60 or y > H: continue
+        x = x0 + 40 * math.sin(lt * 3 + ph)
+        a = lt * 6 + ph; dx, dy = sz * math.cos(a), sz * 0.45 * abs(math.sin(a * 1.3)) + 4
+        c = cols[i % len(cols)]
+        d.polygon([(x - dx, y - dy), (x + dx, y - dy * .2), (x + dx, y + dy), (x - dx, y + dy * .2)], fill=c)

@@ -6,3 +6,5 @@
 | 2026-10-25 | learn-colours-short02 | Colours (red, yellow, blue, green) | Learn Colours with Balloons! 🎈🔴🟡🔵🟢 #shorts | scheduled 2026-10-26 16:00 |
 | 2026-10-26 | guess-the-animal-2-short03 | Animal sounds #2 (sheep, dog, cat) | Guess the Animal #2! 🐑🐶🐱 Who Says Baa? #shorts | scheduled 2026-10-26 08:00 |
 | 2026-10-26 | count-the-pumpkins-short04 | Counting 1–5 (smiley autumn pumpkins) | Count the Pumpkins 1 to 5! 🎃 Counting for Kids #shorts | scheduled 2026-10-26 12:00 |
+| 2026-10-27 | shape-friends-short05 | Shapes (circle, square, triangle, star + corner counting) | Shape Friends! 🔴🟦🔺⭐ Learn Shapes for Kids #shorts | scheduled 2026-10-27 08:00 |
+| 2026-10-27 | big-and-small-short06 | Opposites: big vs small (elephant/mouse, whale/fish, bear/bunny) | Big or Small? 🐘🐭 Opposites for Kids #shorts | scheduled 2026-10-27 12:00 |
