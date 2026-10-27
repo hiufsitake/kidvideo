@@ -29,7 +29,12 @@ healthy habits (wash hands, brush teeth, eat veggies). Rotate across these, buil
 If Metricool analytics show a series doing best, make more of it.
 
 ## Learn from top Shorts (every run, before writing scripts)
-- Web-search what kids' Shorts are getting the most views right now (Tubefilter weekly charts, top kids Shorts channels, trending learning topics).
+- Web-search what kids' Shorts are getting the most views right now. Generic "most viewed" queries only return Tubefilter channel charts, so:
+  use `mode: "extended"`, search for formats/techniques (e.g. "viral YouTube Kids Shorts tips", "toddler Shorts hooks retention", "trending preschool learning topics <month year>"),
+  and WebFetch at least one useful article to pull concrete tips. If results are still thin, say so in `LEARNINGS.md` and reuse the standing takeaways below.
+- Standing takeaways (2026-10-27, air.io YouTube Kids Shorts guide): question or striking visual in the first seconds; a short pause before each payoff;
+  new scene/animation every few seconds; numbered series; bold captions (kids watch muted); **loop the ending back into the opening** so rewatches feel seamless.
+  Ignore any advice to add calls-to-action for kids (our spam rules forbid asking kids to like/subscribe).
 - Study only the *ideas*: topics, hook styles, pacing, length, colour palettes, question formats, series structures. Formats aren't owned by anyone.
 - Never download, copy, trace or re-edit anyone else's video, art, characters, voice or music. Everything we publish is made from scratch here.
 - Note 1–3 takeaways in `LEARNINGS.md` and use them in today's Shorts.
@@ -48,7 +53,10 @@ Upgrade ideas, roughly in priority order:
 6. **Text:** huge, bold, few words, word-by-word pop synced to the voice; always readable on a phone.
 7. **Sound:** a catchy simple melody that matches the theme, a distinct SFX for every pop/reveal, the voice clearly above the music.
 8. **Polish:** particles (stars, confetti, bubbles), smooth easing, no hard cuts without a transition.
-Use Metricool analytics (brand 7637079) once videos have data: compare views and retention by series, and write in `LEARNINGS.md` what the best ones have in common.
+Use Metricool analytics (brand 7637079) once videos have data. YouTube analytics reach Metricool with a **2–3 day lag**, so a Short
+has no numbers until ~72 h after publishing — that is normal, not an error. Query `getAnalyticsDataByMetrics` with
+`YTVP17,YTVP06,YTVP08,YTVP09` (title, views, avg view duration, likes) over a range that covers the publish dates, plus
+`YTEV01,YTEV02` (subscribers, channel views) for totals; the `all videos` connector (YTVV*) currently returns no rows. Then compare views and retention by series, and write in `LEARNINGS.md` what the best ones have in common.
 
 ## Tools
 - Voice: `pip install --break-system-packages kokoro-onnx soundfile`, model files from
@@ -59,6 +67,9 @@ Use Metricool analytics (brand 7637079) once videos have data: compare views and
 - Always check a contact sheet of key frames before publishing (text not clipped, characters recognisable).
 
 ## Publishing
+0. Repo access: attach `hiufsitake/kidvideo` with `add_repo` (access "push") if that tool exists. If it doesn't, check whether
+   `/home/claude/kidvideo` is already a clone with a working `origin` (`git fetch origin main`, then `git checkout -B main origin/main`);
+   if fetch and push work, carry on — only report a problem if neither route gives push access.
 1. Commit the MP4 to `shorts/<slug>.mp4` and push to `main`.
 2. Public URL: `https://raw.githubusercontent.com/hiufsitake/kidvideo/main/shorts/<slug>.mp4` (check it returns 200).
 3. Metricool brand id `7637079`, timezone `Asia/Kuching`, network `youtube`, youtubeData: title (with emoji + `#shorts`), type `short`,

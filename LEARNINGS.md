@@ -27,3 +27,8 @@ Each run adds: date · what we learned from top Shorts · which upgrade we appli
   4. Learning beats — numbered corner dots pop one by one (square 1–4, triangle 1–3) with a pop SFX each; size contrast taught visually with BIG caption vs small caption.
 - Caught in contact sheet: first ending of #6 showed the bear larger than the elephant (contradicts the lesson) — fixed to elephant vs mouse; sea light-rays read as harsh stripes — replaced with bubbles.
 - Result: pending analytics.
+
+## 2026-10-27 (follow-up) — fixing last run's problems
+- Research fixed: extended web search + fetching the air.io "viral Shorts for YouTube Kids" guide gave concrete tips (now in PIPELINE.md "Standing takeaways"). New idea to apply next: make the last frame loop back into the first (same background/characters) so rewatches feel seamless.
+- Analytics explained: Metricool showed 8 subscribers but no per-video views yet because YouTube data arrives with a 2–3 day lag. First usable numbers for Shorts #1–#4 should appear from ~2026-10-28; field IDs documented in PIPELINE.md.
+- Repo access: `add_repo` isn't always offered; PIPELINE.md now says to use the existing clone when fetch/push work.
