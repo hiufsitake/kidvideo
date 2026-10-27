@@ -8,3 +8,5 @@
 | 2026-10-26 | count-the-pumpkins-short04 | Counting 1–5 (smiley autumn pumpkins) | Count the Pumpkins 1 to 5! 🎃 Counting for Kids #shorts | scheduled 2026-10-26 12:00 |
 | 2026-10-27 | shape-friends-short05 | Shapes (circle, square, triangle, star + corner counting) | Shape Friends! 🔴🟦🔺⭐ Learn Shapes for Kids #shorts | scheduled 2026-10-27 08:00 |
 | 2026-10-27 | big-and-small-short06 | Opposites: big vs small (elephant/mouse, whale/fish, bear/bunny) | Big or Small? 🐘🐭 Opposites for Kids #shorts | scheduled 2026-10-27 12:00 |
+| 2026-10-28 | guess-the-animal-3-short07 | Animal sounds #3 (frog, hen, horse) | Guess the Animal #3! 🐸🐔🐴 Who Says Ribbit? #shorts | scheduled 2026-10-28 08:00 |
+| 2026-10-28 | wash-your-hands-short08 | Healthy habits: wash hands (water, soap, scrub, rinse, dry) | Let's Wash Our Hands! 🧼🫧 Healthy Habits for Kids #shorts | scheduled 2026-10-28 12:00 |

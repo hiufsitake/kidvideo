@@ -245,3 +245,22 @@ def confetti(d, lt, n=46, seed=5, cols=((255, 90, 90), (255, 200, 50), (90, 200,
         a = lt * 6 + ph; dx, dy = sz * math.cos(a), sz * 0.45 * abs(math.sin(a * 1.3)) + 4
         c = cols[i % len(cols)]
         d.polygon([(x - dx, y - dy), (x + dx, y - dy * .2), (x + dx, y + dy), (x - dx, y + dy * .2)], fill=c)
+
+# ---------- transitions + seamless loop (added 2026-10-28) ----------
+def iris(old, new, k, cy=1000):
+    """Iris wipe: `new` opens in an expanding circle (k 0..1) over `old`, with a white rim."""
+    m = Image.new("L", (W, H), 0); r = 1150 * ease_out(k)
+    ImageDraw.Draw(m).ellipse((CX - r, cy - r, CX + r, cy + r), fill=255)
+    out = old.copy(); out.paste(new, (0, 0), m)
+    ImageDraw.Draw(out).ellipse((CX - r, cy - r, CX + r, cy + r), outline=(255, 255, 255), width=18)
+    return out
+
+def with_transitions(raw, bounds, t, dur=0.22, loop=0.45):
+    """Wrap a raw frame fn: iris wipe at each scene boundary, and a crossfade over the last `loop` seconds
+    into frame 0 so the Short loops seamlessly when YouTube replays it."""
+    for b in bounds:
+        if b <= t < b + dur: return iris(raw(b - 0.001), raw(t), (t - b) / dur)
+    if loop and t >= DUR - loop:
+        k = ease_out((t - (DUR - loop)) / loop)
+        return Image.blend(raw(t).convert("RGBA"), raw(0.0).convert("RGBA"), k)
+    return raw(t)

@@ -32,3 +32,13 @@ Each run adds: date · what we learned from top Shorts · which upgrade we appli
 - Research fixed: extended web search + fetching the air.io "viral Shorts for YouTube Kids" guide gave concrete tips (now in PIPELINE.md "Standing takeaways"). New idea to apply next: make the last frame loop back into the first (same background/characters) so rewatches feel seamless.
 - Analytics explained: Metricool showed 8 subscribers but no per-video views yet because YouTube data arrives with a 2–3 day lag. First usable numbers for Shorts #1–#4 should appear from ~2026-10-28; field IDs documented in PIPELINE.md.
 - Repo access: `add_repo` isn't always offered; PIPELINE.md now says to use the existing clone when fetch/push work.
+
+## 2026-10-28 — Shorts #7 (Guess the Animal #3) and #8 (Let's Wash Our Hands!)
+- Analytics: Metricool still shows only channel totals (8 subscribers); per-video views for #1–#6 are still null (2–3 day lag), so no series could be ranked yet. Continued the Guess the Animal series (#3) and opened a new high-view category (healthy habits).
+- Research (extended search + conthunt.app Shorts best-practices guide): promise the payoff in the first 1–2 s; one idea per Short; every cut must earn its place; make the last frame match the first so the loop feels seamless; captions should reinforce, not cover, the action.
+- Upgrades applied (promoted into `pipeline/common.py`):
+  1. **Seamless loop** — `with_transitions()` crossfades the last 0.45 s into frame 0 (same background, characters and caption as the hook), so YouTube's auto-replay flows straight back into the question.
+  2. Iris wipe is now a shared helper (`iris()`), and hook captions are fully visible on frame 0 (they're also the loop target).
+  3. Numbered step badges (1–5) with one dominant colour per step for the handwashing routine; zoom on the scrub and the dry payoff.
+- Caught in contact sheet: front-view horse read like a lion/cow (curly mane round the face) — redrawn in side profile with long muzzle and neck mane; tap stream was hidden behind a hand — tap moved between the hands; soap bar overlapped a sleeve — moved and shrunk.
+- Result: pending analytics.
