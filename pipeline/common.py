@@ -74,7 +74,9 @@ def finish(im, size):
     return shade(im).resize((size, size), Image.LANCZOS)
 
 def silhouette(im):
-    s = Image.new("RGBA", im.size, (45, 35, 80, 255)); s.putalpha(im.split()[3]); return s
+    s = Image.new("RGBA", im.size, (45, 35, 80, 255))
+    s.putalpha(im.split()[3].point(lambda v: min(255, v * 4)))  # solid: no see-through cheeks/highlights
+    return s
 
 # ---------- compositing ----------
 def paste_scaled(base, lay, cx, cy, s, rot=0, sx=1.0, sy=1.0, anchor_bottom=False):
@@ -264,3 +266,18 @@ def with_transitions(raw, bounds, t, dur=0.22, loop=0.45):
         k = ease_out((t - (DUR - loop)) / loop)
         return Image.blend(raw(t).convert("RGBA"), raw(0.0).convert("RGBA"), k)
     return raw(t)
+
+# ---------- parallax clouds + letter link (added 2026-10-29) ----------
+def drift_clouds(base, t, spots, speed=22, alpha=230):
+    """Draw clouds that drift sideways over time (parallax layer over a static bg). spots: (x, y, scale)."""
+    d = ImageDraw.Draw(base, "RGBA")
+    for k, (cx, cy, s) in enumerate(spots):
+        x = (cx + t * speed * s + 200) % (W + 400) - 200
+        for dx, dy, r in [(-70, 10, 60), (0, -20, 80), (75, 10, 60), (0, 30, 65)]:
+            d.ellipse((x + dx * s - r * s, cy + dy * s - r * s, x + dx * s + r * s, cy + dy * s + r * s), fill=(255, 255, 255, alpha))
+
+def fly(lay, base, p0, p1, k, s0=1.0, s1=1.0, arc=-160):
+    """Fly a layer from p0 to p1 along an arc (k 0..1) while scaling s0 -> s1."""
+    k = ease_out(min(1, max(0, k)))
+    x = p0[0] + (p1[0] - p0[0]) * k; y = p0[1] + (p1[1] - p0[1]) * k + arc * math.sin(math.pi * k)
+    paste_scaled(base, lay, x, y, s0 + (s1 - s0) * k)

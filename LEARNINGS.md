@@ -42,3 +42,15 @@ Each run adds: date · what we learned from top Shorts · which upgrade we appli
   3. Numbered step badges (1–5) with one dominant colour per step for the handwashing routine; zoom on the scrub and the dry payoff.
 - Caught in contact sheet: front-view horse read like a lion/cow (curly mane round the face) — redrawn in side profile with long muzzle and neck mane; tap stream was hidden behind a hand — tap moved between the hands; soap bar overlapped a sleeve — moved and shrunk.
 - Result: pending analytics.
+
+## 2026-10-29 — Shorts #9 (ABC Fun #1) and #10 (Baby Animals #1)
+- Analytics: Metricool still returns null views for all published Shorts (#1–#6 listed, no numbers yet; 2–3 day lag), so no series ranked. Opened two new numbered series in high-view categories not yet covered: ABC/alphabet and baby animal names.
+- Research (extended search + aibrify "Shorts retention curve playbook 2026"): change the visual every ~1.5–2 s (not faster than ~1.2 s, never a gap > 2.5 s); 2–4 high-contrast words per frame; deliver the first payoff in the first half and make each item a self-contained mini-payoff; match last frame to first for the loop.
+- Upgrades applied:
+  1. **Extra mid-scene beat** so nothing sits still > ~1.5 s: ABC — "letter link" (the first letter flies from the word up into the big letter, with a pop); Baby Animals — heart "hug" beat with a happy hop and a two-note chime.
+  2. **Parallax clouds** — `drift_clouds()` in `common.py`: clouds slowly drift over each static background.
+  3. **Solid silhouettes** — `silhouette()` now ignores semi-transparent cheeks/highlights, which used to show through the guess silhouettes.
+  4. Recurring cast: dog/cat/hen reused from #3/#7 via AST import (`borrow()`), new chick character; new scene concept (parent + baby pair).
+- Music: ABC Short uses our own synth of the traditional "Twinkle/ABC" melody (1761, public domain).
+- Caught in contact sheet: flying letter overshot and overlapped the big letter (fixed to land exactly on it); Baby Animals characters too small (mommy 560→680, baby 330→400).
+- Result: pending analytics.
